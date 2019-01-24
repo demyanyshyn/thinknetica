@@ -7,5 +7,5 @@ ideal_height = ideal_weight.abs
 puts "#{user_name}, Ваш идеальный вес #{ideal_weight}!" if ideal_weight > 0
 puts "#{user_name}, Ваш вес идеален!" if ideal_weight == 0
 if ideal_weight < 0
-  puts "Уважаемый #{u ser_name}, Вам бы подрасти на #{ideal_height} cm!" 
+  puts "Уважаемый #{user_name}, Вам бы подрасти на #{ideal_height} cm!" 
 end
