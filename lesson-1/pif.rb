@@ -1,15 +1,17 @@
 puts "Введите три стороны треугольника через запятую:"
-a = gets.split(",").map(&:to_f)
-max_length = a[s = 0]
-if max_length < a[s += 1] #определяем и присваем самую длинную сторону
-	max_length = a[s]
-	if max_length < a[s += 1]
-		max_length = a[s]
+side = gets.split(",").map(&:to_f)
+max_length = side.max
+puts max_length.class
+if side[0] == side[1] && side[1]== side[2]
+	puts "Данный треугольник является равносторонним"	
+else
+	side.delete(max_length) #удаляем из массива значение гипотенузы
+	puts side.class
+	if max_length**2 == (side[0]**2 + side[1]**2)   #проверяем теорему Пифагора
+		puts "Данный треугольник является прямоугольным, катет:#{max_length}"
+		puts "В тоже время он равнобедренный а=#{side[0]} и b=#{side[1]}" if side[0]==side[1] #Сравниваем катеты		
+	else 
+		puts "Данный треугольник не является прямоугольным"
 	end
-end
-a.delete(max_length).to_f #удаляем из массива значение гипотенузы
-if max_length**2 == (a[0]**2 + a[1]**2)   #проверяем теорему Пифагора
-puts "Данный треугольник является прямоугольным, катет:#{max_length}"
-puts "В тоже время он равнобедренный а=#{a[0]} и b=#{a[1]}" if a[0]==a[1] #Сравниваем катеты
-else puts "Данный треугольник не является прямоугольным"
+
 end
