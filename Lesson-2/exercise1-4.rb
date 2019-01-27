@@ -17,8 +17,8 @@ month.each { |e, x| puts e if x == 30 }
 
 #Задание 2
 array=[10]
-while array[-1] < 100
-  array.push(array[-1] + 5)
+while array.last < 100
+  array.push(array.last + 5)
 end
 print array
 
@@ -34,4 +34,4 @@ letters_hash={}
 #i = 1
 letters_array = ('a'..'z').to_a
 letters_array.each_with_index {|item, index| letters_hash[item] = index}
-puts letters
+puts letters_hash
