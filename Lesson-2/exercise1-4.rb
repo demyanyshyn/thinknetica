@@ -1,3 +1,4 @@
+# Задание 1
 month = {
   "January" => 31,
   "February"=> 28,
@@ -13,27 +14,24 @@ month = {
   "December"=> 30
 }
 month.each { |e, x| puts e if x == 30 } 
+
+#Задание 2
 array=[10]
-i = 0
-while array[i] < 100
-  array.push(array[i] + 5)
-  i += 1
+while array[-1] < 100
+  array.push(array[-1] + 5)
 end
 print array
 
+#Задание 3
 array = [1,1]
-i = 1
-while array[i-1] + array[i]  < 100
-  array.push(array[i-1] + array[i])
-  i += 1
+while array[-2] + array[-1] < 100
+  array.push(array[-2] + array[-1])
 end
 print array
 
-letters=Hash.new
-i=1
-a = ('a'..'z').to_a
-a.each do |s|
-  letters[s] = i
-  i +=1  
-end
+#Задание 4
+letters_hash={}
+#i = 1
+letters_array = ('a'..'z').to_a
+letters_array.each_with_index {|item, index| letters_hash[item] = index}
 puts letters
