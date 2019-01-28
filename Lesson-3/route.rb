@@ -20,7 +20,5 @@ class Route
     route = [@station_list[0][0]]
     route += @station_list[-1]   # << @route.station_list[0][0] << 
     route << @station_list[0][-1]  
-
   end
-
 end
