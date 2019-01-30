@@ -2,7 +2,7 @@ load "./station.rb"
 load "./route.rb"
 load "./train.rb"
 
-odessa = Station.new ("Odessa golovna")
+odessa = Station.new("Odessa golovna")
 puts odessa.name
 
 route1 = Route.new("Odessa", "Kiev")
@@ -20,7 +20,7 @@ train1.move_forward
 train1.move_forward 
 
 puts "Полный список станций маршрута #{route1.name}: #{route1.station_list}"
-puts "Список станций рядом с #{train1.current_station}: #{train1.around_stations}"
+puts "Список станций рядом с #{train1.current_station}: #{train1.previous_station}"
 
 odessa.get_train(train1)
 odessa.get_train(train2)
@@ -29,5 +29,5 @@ train1.add_wagon
 puts "Список поездов на станции #{odessa.name}:#{odessa.train_list_by_type(:pass)} "
 puts "Количество вагонов у поезда #{train1.number}: #{train1.wagons}"
 
-route1.delete_station ("Zhmerinka")
+route1.delete_station("Zhmerinka")
 puts "Полный список станций маршрута #{route1.name}: #{route1.station_list}"
